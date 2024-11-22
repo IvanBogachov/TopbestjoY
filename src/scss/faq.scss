@@ -1,0 +1,68 @@
+@include media(mobile) {
+  .faq-title {
+    padding-bottom: 40px;
+  }
+  .faq-accordion-container .ac {
+    margin-top: 0; /* Прибираємо відступ */
+    border: none; /* Вимикаємо рамку */
+    background-color: transparent; /* Робимо фон прозорим */
+    box-sizing: border-box; /* Залишаємо без змін, якщо потрібно */
+  }
+
+  /* Перевизначаємо основні стилі бібліотеки */
+  .faq-accordion-container .ac-trigger {
+    all: unset; /* Відключаємо всі стилі бібліотеки */
+    display: flex; /* Вирівнюємо іконку та текст у рядок */
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    background-color: inherit;
+    border: 2px solid black; /* Чорна рамка */
+    border-radius: 8px; /* Закруглені кути */
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    stroke: #333;
+    cursor: pointer;
+    text-align: left;
+    position: relative;
+  }
+  .faq-accordion-container .ac .ac-trigger {
+    display: flex;
+    width: 100%; /* Елемент займатиме всю ширину контейнера */
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 8px;
+  }
+
+  /* Іконка зліва */
+  .faq-accordion-container .faq-item-btn-icon {
+    margin-right: 10px; /* Відступ між іконкою та текстом */
+    flex-shrink: 0;
+  }
+
+  .faq-accordion-container .faq-item-btn-icon svg {
+    display: block;
+  }
+
+  /* Видаляємо стандартний хрестик від бібліотеки */
+  .faq-item-btn::after {
+    display: none;
+  }
+
+  /* Опис у рамці */
+  .faq-accordion-container .ac-panel {
+    border: 2px solid #000000; /* Сіра рамка */
+    border-radius: 8px; /* Закруглені кути */
+    padding: 10px;
+    background-color: inherit; /* Світлий фон */
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .faq-accordion-container .ac-panel .faq-item-description {
+    margin: 0;
+    color: #555; /* Темно-сірий текст */
+    font-size: 14px;
+  }
+}
