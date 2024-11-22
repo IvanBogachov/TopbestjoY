@@ -13,7 +13,9 @@
     <title>topbestjoy.com</title>
     
     <script type="module" crossorigin src="/TopbestjoY/commonHelpers.js"></script>
-    <link rel="stylesheet" href="/TopbestjoY/assets/index-a75a3a3f.css">
+    <link rel="modulepreload" crossorigin href="/TopbestjoY/assets/vendor-e5d1ffd8.js">
+    <link rel="stylesheet" href="/TopbestjoY/assets/vendor-7c8ef494.css">
+    <link rel="stylesheet" href="/TopbestjoY/assets/index-2dc2ce99.css">
   </head>
   <body>
     <header class="header"></header>
@@ -26,7 +28,96 @@
 
     <header class="benefits"></header>
 
-    <header class="reviews"></header>
+    <section class="reviews-section container" id="reviews">
+  <h2 class="reviews-section-title">Reviews</h2>
+  <div class="review-grid swiper mySwiper">
+    <div class="reviews-nav-div">
+      <button class="reviews-button-prev">
+        <svg class="arrow-right" width="40" height="40">
+          <use href="../img/sprite.svg#icon-left"></use>
+        </svg>
+      </button>
+      <button class="reviews-button-next">
+        <svg class="arrow-left" width="40" height="40">
+          <use href="../img/sprite.svg#icon-right"></use>
+        </svg>
+      </button>
+    </div>
+
+    <ul class="swiper-wrapper">
+      <li class="reviews-card swiper-slide">
+        <img
+          src="../img/Ellipse415.png"
+          alt="PuzzleExplorer"
+          class="reviewer-avatar"
+        />
+        <div class="review-divider-top"></div>
+        <p class="review-text">
+          Captivating and relaxing! I love discovering new parts of the island
+          with each merge.
+        </p>
+        <div class="review-divider-bottom"></div>
+        <p class="reviewer-name">PuzzleExplorer</p>
+      </li>
+      <li class="reviews-card swiper-slide">
+        <img
+          src="../img/Ellipse416.png"
+          alt="IslandAdventurer"
+          class="reviewer-avatar"
+        />
+        <div class="review-divider-top"></div>
+        <p class="review-text">
+          Beautiful graphics and a unique concept. Perfect for relaxing and
+          unwinding!
+        </p>
+        <div class="review-divider-bottom"></div>
+        <p class="reviewer-name">IslandAdventurer</p>
+      </li>
+      <li class="reviews-card swiper-slide">
+        <img
+          src="../img/Ellipse419.png"
+          alt="MergeMaster"
+          class="reviewer-avatar"
+        />
+        <div class="review-divider-top"></div>
+        <p class="review-text">
+          A great balance of challenge and fun. The island feels alive with all
+          the different puzzles!
+        </p>
+        <div class="review-divider-bottom"></div>
+        <p class="reviewer-name">MergeMaster</p>
+      </li>
+      <li class="reviews-card swiper-slide">
+        <img
+          src="../img/Ellipse417.png"
+          alt="TreasureHunter"
+          class="reviewer-avatar"
+        />
+        <div class="review-divider-top"></div>
+        <p class="review-text">
+          Engaging gameplay with lots of surprises! Highly recommended for
+          puzzle fans.
+        </p>
+        <div class="review-divider-bottom"></div>
+        <p class="reviewer-name">TreasureHunter</p>
+      </li>
+      <li class="reviews-card swiper-slide">
+        <img
+          src="../img/Ellipse418.png"
+          alt="MysterySolver"
+          class="reviewer-avatar"
+        />
+        <div class="review-divider-top"></div>
+        <p class="review-text">
+          Addictive and visually stunning. I keep coming back to see what’s
+          next!
+        </p>
+        <div class="review-divider-bottom"></div>
+        <p class="reviewer-name">MysterySolver</p>
+      </li>
+    </ul>
+  </div>
+</section>
 
     <header class="faq"></header>
 
