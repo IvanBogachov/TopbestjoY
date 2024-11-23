@@ -9,10 +9,11 @@
 @import './footer.scss';
 
 :root {
-  font-family: Montserrat, Inter, sans-serif;
+  font-family: Montserrat, sans-serif;
   font-size: 32px;
   line-height: 24px;
   font-weight: 400;
+  letter-spacing: 0.03em;
 
   color: #000000;
   background-color: #f2ebd5;
