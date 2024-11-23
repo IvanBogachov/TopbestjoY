@@ -1,68 +1,146 @@
+// Мобільні стилі
 @include media(mobile) {
   .faq-title {
+    font-weight: 600;
+    font-size: 32px;
     padding-bottom: 40px;
   }
-  .faq-accordion-container .ac {
-    margin-top: 0; /* Прибираємо відступ */
-    border: none; /* Вимикаємо рамку */
-    background-color: transparent; /* Робимо фон прозорим */
-    box-sizing: border-box; /* Залишаємо без змін, якщо потрібно */
+
+  .faq-section {
+    padding-bottom: 40px;
   }
 
-  /* Перевизначаємо основні стилі бібліотеки */
-  .faq-accordion-container .ac-trigger {
-    all: unset; /* Відключаємо всі стилі бібліотеки */
-    display: flex; /* Вирівнюємо іконку та текст у рядок */
+  .faq-accordion-container .ac {
+    margin-top: 0;
+    border: none;
+    background-color: transparent;
+    box-sizing: border-box;
+  }
+
+  .faq-accordion-container .ac .ac-trigger {
+    all: unset;
+    display: flex;
     align-items: center;
     justify-content: flex-start;
     width: 100%;
     background-color: inherit;
-    border: 2px solid black; /* Чорна рамка */
-    border-radius: 8px; /* Закруглені кути */
+    border: 2px solid $_main_color_text;
+    border-radius: 20px;
     padding: 10px 15px;
-    font-size: 16px;
     font-weight: bold;
-    stroke: #333;
+    stroke: $_accent_color;
     cursor: pointer;
-    text-align: left;
+    text-align: center;
     position: relative;
-  }
-  .faq-accordion-container .ac .ac-trigger {
-    display: flex;
-    width: 100%; /* Елемент займатиме всю ширину контейнера */
+    min-height: 97px;
     box-sizing: border-box;
-    border: 2px solid black;
-    border-radius: 8px;
+    @include font(16, 28);
   }
 
-  /* Іконка зліва */
   .faq-accordion-container .faq-item-btn-icon {
-    margin-right: 10px; /* Відступ між іконкою та текстом */
+    margin-right: 10px;
     flex-shrink: 0;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .faq-accordion-container .faq-item.is-active .faq-item-btn-icon {
+    transform: rotate(180deg);
   }
 
   .faq-accordion-container .faq-item-btn-icon svg {
     display: block;
   }
 
-  /* Видаляємо стандартний хрестик від бібліотеки */
   .faq-item-btn::after {
     display: none;
   }
 
-  /* Опис у рамці */
+  // Виправлені стилі для ac-panel
   .faq-accordion-container .ac-panel {
-    border: 2px solid #000000; /* Сіра рамка */
-    border-radius: 8px; /* Закруглені кути */
+    display: block; /* Відображаємо панель коректно */
+    border: 2px solid $_main_color_text;
+    border-radius: 20px;
     padding: 10px;
-    background-color: inherit; /* Світлий фон */
+    background-color: inherit;
     margin-top: 10px;
     margin-bottom: 10px;
+    overflow: hidden;
+    visibility: hidden; /* Спочатку приховано */
+    height: 0;
+    max-height: 0;
+    transition: max-height $_time_transform $_cubic_bezier,
+      visibility $_time_transform $_cubic_bezier;
+  }
+
+  .ac.js-enabled .ac-panel {
+    overflow: hidden;
+    visibility: hidden;
+    height: 0;
+    max-height: 0;
+    transition: max-height $_time_transform $_cubic_bezier,
+      visibility $_time_transform $_cubic_bezier;
   }
 
   .faq-accordion-container .ac-panel .faq-item-description {
     margin: 0;
-    color: #555; /* Темно-сірий текст */
+    color: #000;
     font-size: 14px;
+  }
+
+  .ac.is-active .ac-panel {
+    height: auto; /* Коректний розмір для контенту */
+    visibility: visible;
+    min-height: 97px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Достатній простір для контенту */
+  }
+
+  .faq-section
+    .faq-list
+    .faq-item.ac
+    .faq-item-description-container.ac-panel
+    .faq-item-description.ac-text {
+    color: #000;
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    @include font(16, 22);
+    margin: 0;
+    padding: 5px 0;
+  }
+}
+
+// Десктопні стилі
+@include media(desktop) {
+  .faq-title {
+    font-size: 40px;
+    padding-bottom: 80px;
+  }
+  .faq-section {
+    padding-bottom: 120px;
+  }
+  .faq-accordion-container .ac .ac-trigger {
+    @include font(32, 23);
+  }
+  .faq-accordion-container .ac-panel .faq-item-description {
+    @include font(32, 23);
+  }
+
+  .faq-accordion-container .ac .ac-trigger {
+    min-height: 97px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .faq-accordion-container .faq-item-btn-icon {
+    position: absolute;
+    left: 10px;
+  }
+
+  .faq-accordion-container .faq-item-btn span {
+    flex: 1;
+    text-align: center;
   }
 }
