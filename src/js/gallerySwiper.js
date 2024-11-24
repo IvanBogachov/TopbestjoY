@@ -3,11 +3,13 @@ import { Navigation, Keyboard } from 'swiper/modules';
 
 const swiper = new Swiper('.mySwiper', {
   direction: 'horizontal',
+  spaceBetween: 20,
   loop: true,
-  slidesPerView: 'auto',
+  slidesPerView: 1,
+  slidesPerGroup: 1,
   modules: [Navigation, Keyboard],
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.gallery-button-next',
+    prevEl: '.gallery-button-prev',
   },
 });

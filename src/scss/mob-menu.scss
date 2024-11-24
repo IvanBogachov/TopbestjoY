@@ -1,11 +1,11 @@
 .mob-menu {
   position: fixed;
-  top: 0;
+  top: 88px;
   right: 0;
-  width: 179px;
-  height: 256px;
+  width: 180px;
+  height: 262px;
   background-color: #1a4731;
-  z-index: 6;
+  z-index: 888;
   transform: translateX(100%);
   transition: transform 0.3s ease-in-out;
   &.open {
