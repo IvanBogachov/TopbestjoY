@@ -76,3 +76,103 @@
     @include font(14, 28);
   }
 }
+@include media(desktop) {
+  .reviewer-avatar {
+    display: block;
+    padding-top: 20px;
+    max-width: 142px;
+    margin: 0 auto;
+  }
+
+  .reviews-nav-div {
+    display: none; // Ховаємо навігацію на десктопі
+  }
+
+  .reviews-section.swiper {
+    display: none; // Вимикаємо Swiper на десктопі
+  }
+
+  .reviews-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px 20px;
+    align-items: stretch; // Вирівнювання верхнього краю
+  }
+
+  .reviews-card {
+    flex: 1 1 calc(50% - 20px);
+    max-width: 510px;
+    // padding: 20px;
+    border-radius: 25px;
+    background-color: #1a4731;
+    text-align: center;
+    color: #fff;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column; /* Робимо картки флекс-контейнером */
+    // flex-direction: column; /* Контент розташовується вертикально */
+    // justify-content: space-between;
+  }
+  .reviews-card:nth-child(1) {
+    order: 1;
+  }
+
+  .reviews-card:nth-child(2) {
+    order: 2;
+  }
+
+  // Картка №3 (по центру, прозорий фон)
+  .reviews-card.spec-slide {
+    flex: 0 0 100%; // Повна ширина
+    order: 3; // Займає всю ширину
+    background-color: transparent; // Прозорий фон
+    margin: 0 50px;
+    color: #000;
+    // transform: translateX(80px);
+    .review-text {
+      color: #000;
+    }
+  }
+  .reviews-card:nth-child(4) {
+    order: 4;
+  }
+
+  .reviews-card:nth-child(5) {
+    order: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .reviews-card:nth-child(5) .review-divider-bottom {
+    margin: 49px auto 23px; /* Притискає донизу */
+  }
+
+  .reviews-card:nth-child(5) .reviewer-name {
+    margin-top: 10px; /* Відступ між лінією та іменем */
+  }
+
+  // Зменшення розміру для карток 4 і 5, якщо потрібно
+  // .reviews-card:nth-child(4),
+  // .reviews-card:nth-child(5) {
+  //   flex: 1 1 calc(50% - 20px); // 50% ширини
+  // }
+  .review-divider-top {
+    width: 334px;
+  }
+  .review-divider-bottom {
+    margin: 0 auto 32px;
+    width: 334px;
+  }
+  .review-text {
+    @include font(36, 50);
+    padding: 48px 0;
+  }
+  .reviewer-name {
+    padding-bottom: 20px;
+    @include font(24, 33);
+  }
+  .reviews-section {
+    padding-bottom: 120px;
+  }
+}
