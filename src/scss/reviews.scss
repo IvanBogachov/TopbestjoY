@@ -1,6 +1,6 @@
 @include media(mobile) {
-  .reviews-section {
-    padding-bottom: 40px;
+  .reviews-section .container {
+    width: 320px;
   }
   .reviews-section-title {
     font-weight: 600;
@@ -77,6 +77,9 @@
   }
 }
 @include media(desktop) {
+  .reviews-section.container {
+    width: 1200px;
+  }
   .reviewer-avatar {
     display: block;
     padding-top: 20px;
@@ -171,8 +174,5 @@
   .reviewer-name {
     padding-bottom: 20px;
     @include font(24, 33);
-  }
-  .reviews-section {
-    padding-bottom: 120px;
   }
 }

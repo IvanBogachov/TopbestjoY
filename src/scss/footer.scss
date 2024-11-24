@@ -1,4 +1,8 @@
 @include media(mobile) {
+  .footer-section .container {
+    width: 320px;
+    padding-bottom: 0px;
+  }
   .footer-title {
     display: none;
   }
@@ -89,6 +93,10 @@
 }
 
 @include media(desktop) {
+  .footer-section .container {
+    width: 1200px;
+    padding-bottom: 22px;
+  }
   .footer-title {
     display: block;
     font-weight: 600;
