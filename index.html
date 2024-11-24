@@ -15,7 +15,7 @@
     <script type="module" crossorigin src="/TopbestjoY/commonHelpers.js"></script>
     <link rel="modulepreload" crossorigin href="/TopbestjoY/assets/vendor-ae7a8038.js">
     <link rel="stylesheet" href="/TopbestjoY/assets/vendor-4e87ff37.css">
-    <link rel="stylesheet" href="/TopbestjoY/assets/styles-372d5b3f.css">
+    <link rel="stylesheet" href="/TopbestjoY/assets/styles-1c49269a.css">
   </head>
   <body>
     <header class="header">
@@ -36,7 +36,7 @@
         <li class="header-menu-item"><a href="#faq">FAQ</a></li>
       </ul>
     </nav>
-    <button type="button" class="header-btn-burger">
+    <button type="button" class="header-btn-burger" id="burger-btn">
       <svg class="header-burger" width="36" height="36">
         <use href="/TopbestjoY/assets/sprite-3d33f519.svg#icon-burger"></use>
       </svg>
@@ -69,14 +69,61 @@
   </div>
 </section>
 
-    <header class="gallery"></header>
+    <section class="gallery retreat">
+  <div class="container gallery-container">
+    <h2 class="gallery-title">Gallery</h2>
+    <div class="gallery-icons-arrows">
+      <button type="button" class="gallery-btn swiper-button-prev">
+        <svg class="gallery-icon-left">
+          <use href="/TopbestjoY/assets/sprite-3d33f519.svg#icon-left"></use>
+        </svg>
+      </button>
+      <button type="button" class="gallery-btn swiper-button-next">
+        <svg class="gallery-icon-right">
+          <use href="/TopbestjoY/assets/sprite-3d33f519.svg#icon-right"></use>
+        </svg>
+      </button>
+    </div>
+    <div class="gallery-list swiper mySwiper">
+      <ul class="gallery-image-list swiper-wrapper">
+        <li class="gallery-image-item swiper-slide">
+          <img src="/TopbestjoY/assets/Gallery1@1x-856c6411.png" alt="gallery image" />
+        </li>
+        <li class="gallery-image-item swiper-slide">
+          <img src="/TopbestjoY/assets/Gallery2@1x-db983258.png" alt="gallery image" />
+        </li>
+        <li class="gallery-image-item swiper-slide">
+          <img src="/TopbestjoY/assets/Gallery3@1x-5c56c6da.png" alt="gallery image" />
+        </li>
+        <li class="gallery-image-item swiper-slide">
+          <img src="/TopbestjoY/assets/Gallery4@1x-7ccdc87d.png" alt="gallery image" />
+        </li>
+        <li class="gallery-image-item swiper-slide">
+          <img src="/TopbestjoY/assets/Gallery5@1x-87cce3ed.png" alt="gallery image" />
+        </li>
+        <li class="gallery-image-item swiper-slide">
+          <img src="/TopbestjoY/assets/Gallery6@1x-72cafb8f.png" alt="gallery image" />
+        </li>
+        <li class="gallery-image-item swiper-slide">
+          <img src="/TopbestjoY/assets/Gallery7@1x-69524728.png" alt="gallery image" />
+        </li>
+        <li class="gallery-image-item swiper-slide">
+          <img src="/TopbestjoY/assets/Gallery8@1x-cfe3f81a.png" alt="gallery image" />
+        </li>
+        <li class="gallery-image-item swiper-slide">
+          <img src="/TopbestjoY/assets/Gallery9@1x-64700777.png" alt="gallery image" />
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-    <section class="about-us" id="about-us">
-  <div class="container about-us-container">
+    <section class="about retreat" id="about-us">
+  <div class="container about-container">
     <div>
-      <h2 class="about-us-title">About Us</h2>
-      <h3 class="about-us-second-title">Merge Mystery: Lost Island</h3>
-      <p class="about-us-text">
+      <h2 class="about-title">About Us</h2>
+      <h3 class="about-second-title">Merge Mystery: Lost Island</h3>
+      <p class="about-text">
         is an immersive adventure puzzle game where players uncover the secrets
         of a lost island by merging items. Discover hidden treasures, solve
         challenging puzzles, and explore unique locations as you help the
@@ -89,13 +136,13 @@
       alt="iPhone13"
       width="353"
       height="686"
-      class="about-us-img"
+      class="about-img"
       src="/TopbestjoY/assets/iPhone13-a73d62e1.png"
     />
   </div>
 </section>
 
-    <section class="benefits" id="benefits">
+    <section class="benefits retreat" id="benefits">
   <div class="container benefits-container">
     <h2 class="benefits-title">Benefits</h2>
     <ul class="benefits-list">
@@ -370,6 +417,21 @@
   <!-- Копірайт текст посередині зліва -->
   <p class="copyright">©2024 TopBestJoy.com, All rights reserved.</p>
 </footer>
+
+    <section class="mob-menu" id="mob-menu">
+  <div class="mob-menu-container">
+    <nav class="nav-mob-menu">
+      <ul class="mob-menu-list">
+        <li class="mob-menu-list-item"><a href="index.html">Home</a></li>
+        <li class="mob-menu-list-item"><a href="#gallery">Gallery</a></li>
+        <li class="mob-menu-list-item"><a href="#about-us">About us</a></li>
+        <li class="mob-menu-list-item"><a href="#benefits">Benefits</a></li>
+        <li class="mob-menu-list-item"><a href="#reviews">Reviews</a></li>
+        <li class="mob-menu-list-item"><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+  </div>
+</section>
 
 
     
