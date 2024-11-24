@@ -20,8 +20,6 @@
   @include media(desktop) {
     padding: 27px 197px 27px 80px;
     max-width: 1200px;
-    // gap: 109px;
-    // justify-content: start;
   }
 }
 
@@ -60,6 +58,11 @@
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+        transition: color 0.25s ease-in-out;
+        &:hover,
+        &:focus {
+          color: rgba(255, 111, 60, 1);
+        }
       }
     }
   }
