@@ -1,5 +1,5 @@
 .hero {
-  width: 100%;
+  // width: 100%;
   background-image: linear-gradient(
     rgba(242, 235, 213, 1) 48.02%,
     rgba(42, 191, 158, 1) 132.26%
@@ -9,10 +9,26 @@
 .hero-container {
   padding-top: 40px;
   padding-bottom: 88px;
+  background-image: url(/img/iPhone13Pro-mob@1x.png);
+  background-repeat: no-repeat;
+  background-position: bottom 24px right 20px;
 
   @include media(desktop) {
     width: 1200px;
     padding: 80px 80px 166px 80px;
+    background-image: url(/img/iPhone13Pro-desk@1x.png);
+    background-position: bottom 30px right 80px;
+  }
+}
+
+@media screen and (min-resolution: 2dppx), (min-resolution: 192dpi) {
+  .hero-container {
+    background-image: url(/img/iPhone13Pro-mob@2x.png);
+    background-size: 100px 195px;
+    @include media(desktop) {
+      background-image: url(/img/iPhone13Pro-desk@2x.png);
+      background-size: 312px 607px;
+    }
   }
 }
 
@@ -45,11 +61,16 @@
   }
 }
 .hero-btn {
-  padding: 5px 21px 7px 7px;
+  padding: 8px 24px 10px 10px;
   border-radius: 15px;
   background: #fff;
   border: none;
-  width: 160px;
+  // width: 164px;
+  transition: border 0.25s ease-in-out;
+  &:hover,
+  &:focus {
+    border: solid 3px #1a4731;
+  }
 
   @include media(desktop) {
     padding: 10px 51px 10px 20px;
@@ -83,10 +104,8 @@
 }
 
 .hero-btn-text-up {
-  color: #000;
   font-family: Montserrat;
   font-size: 14px;
-  font-style: normal;
   font-weight: 500;
   line-height: normal;
 
@@ -96,10 +115,8 @@
 }
 
 .hero-btn-text-down {
-  color: #000;
   font-size: 16px;
   font-family: Montserrat;
-  font-style: normal;
   font-weight: 600;
   line-height: normal;
   @include media(desktop) {
