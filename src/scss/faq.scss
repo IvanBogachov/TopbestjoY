@@ -115,7 +115,7 @@
 
 // Десктопні стилі
 @include media(desktop) {
-  .faq-section.container {
+  .faq-section .container {
     width: 1200px;
     padding-bottom: 0px;
   }

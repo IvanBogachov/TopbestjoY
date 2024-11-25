@@ -87,8 +87,21 @@
     color: rgba(26, 71, 49, 1);
     text-decoration: underline;
   }
+  .list-item a {
+  text-decoration: underline;
+text-decoration-skip-ink: none;
+}
+.list-item {
+  line-height: 39px;
+  overflow-wrap: anywhere;
+     text-indent: -27px;
+        margin-left: 30px;
+}
 }
 @include media(desktop) {
+  .privacy-container .container {
+    width: 1200px;
+  }
   .page-button-prev {
     font-size: 36px;
   }
@@ -100,9 +113,21 @@
     font-size: 40px;
   }
   .content-text {
+    // font-family: Montserrat, sans-serif;
     font-size: 32px;
+    line-height: 39px;
   }
   .list-container {
     font-size: 32px;
   }
+//   .list-container {
+//   width: auto; /* контейнер автоматично підлаштовується */
+// }
+  .list-item {
+  line-height: 39px;
+  overflow-wrap: anywhere;
+          text-indent: -45px;
+        margin-left: 70px;
+}
+
 }
