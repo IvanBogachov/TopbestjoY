@@ -3,3 +3,4 @@ import './js/faq.js';
 
 import './js/mobMenu.js';
 import './js/gallerySwiper.js';
+import './js/scroll-up.js';

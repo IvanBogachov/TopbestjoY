@@ -9,6 +9,8 @@
 @import './footer.scss';
 @import './page.scss';
 
+@import './scroll-up.scss';
+
 @import './mob-menu.scss';
 
 :root {
@@ -25,4 +27,21 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2abf9e;
+  border-radius: 10px;
+  transition: background $_time_transform $_cubic_bezier;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #119478;
 }

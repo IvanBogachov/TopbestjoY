@@ -25,5 +25,8 @@
 <path style="fill: var(--color1)" d="M16.244 24.376c2.217 0 4.231-0.848 5.754-2.228l-2.656-2.248c-0.89 0.678-1.979 1.044-3.098 1.043-2.232 0-4.128-1.423-4.842-3.41l-2.799 2.156c1.42 2.779 4.305 4.686 7.64 4.686z"></path>
 <path style="fill: var(--color1)" d="M24.659 14.113h-0.691v-0.036h-7.724v3.433h4.85c-0.338 0.951-0.948 1.782-1.754 2.391l0.001-0.001 2.656 2.248c-0.188 0.171 2.828-2.063 2.828-6.354 0-0.575-0.059-1.137-0.167-1.681z"></path>
 </symbol>
+<symbol id="icon-up-arrow" viewBox="0 0 32 32">
+<path fill="none" stroke-width="3.2" stroke-miterlimit="4" stroke-linecap="butt" stroke-linejoin="miter" style="stroke: var(--color1, #fafafa)" d="M24 20l-8-8-8 8"></path>
+</symbol>
 </defs>
 </svg>

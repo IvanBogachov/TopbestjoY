@@ -1,0 +1,23 @@
+.top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1000;
+  display: none;
+  border-radius: 50%;
+  background-color: rgba(42, 191, 158, 1);
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color $_time_transform $_cubic_bezier;
+}
+
+.top:hover {
+  background-color: rgba(42, 191, 159, 0.781);
+}
+
+.top-icon {
+  fill: transparent;
+  stroke: #ed3b44;
+}
