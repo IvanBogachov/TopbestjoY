@@ -2,6 +2,7 @@
 @include media(mobile) {
   .faq-section .container {
     width: 320px;
+    padding-bottom: 0px;
   }
   .faq-title {
     font-weight: 600;
@@ -27,7 +28,7 @@
     justify-content: flex-start;
     width: 100%;
     background-color: inherit;
-    border: 2px solid $_main_color_text;
+    border: 3px solid $_main_color_text;
     border-radius: 20px;
     padding: 10px 15px;
     font-weight: bold;
@@ -38,12 +39,18 @@
     min-height: 97px;
     box-sizing: border-box;
     @include font(16, 28);
+
+    transition: border $_time_transform $_cubic_bezier, stroke $_time_transform $_cubic_bezier;
+  }
+  .faq-accordion-container .ac .ac-trigger:hover {
+    border: 3px solid $_accent_color;
+    stroke: $_main_color_text;
   }
 
   .faq-accordion-container .faq-item-btn-icon {
     margin-right: 10px;
     flex-shrink: 0;
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform $_time_transform $_cubic_bezier;
   }
 
   .faq-accordion-container .faq-item.is-active .faq-item-btn-icon {
@@ -58,17 +65,16 @@
     display: none;
   }
 
-  // Виправлені стилі для ac-panel
   .faq-accordion-container .ac-panel {
-    display: block; /* Відображаємо панель коректно */
-    border: 2px solid $_main_color_text;
+    display: block;
+    border: 3px solid $_main_color_text;
     border-radius: 20px;
     padding: 10px;
     background-color: inherit;
     margin-top: 10px;
     margin-bottom: 10px;
     overflow: hidden;
-    visibility: hidden; /* Спочатку приховано */
+    visibility: hidden;
     height: 0;
     max-height: 0;
     transition: max-height $_time_transform $_cubic_bezier,
@@ -81,7 +87,7 @@
     height: 0;
     max-height: 0;
     transition: max-height $_time_transform $_cubic_bezier,
-      visibility $_time_transform $_cubic_bezier;
+    visibility $_time_transform $_cubic_bezier;
   }
 
   .faq-accordion-container .ac-panel .faq-item-description {
@@ -91,12 +97,12 @@
   }
 
   .ac.is-active .ac-panel {
-    height: auto; /* Коректний розмір для контенту */
+    height: auto;
     visibility: visible;
     min-height: 97px;
     display: flex;
     align-items: center;
-    justify-content: center; /* Достатній простір для контенту */
+    justify-content: center;
   }
 
   .faq-section

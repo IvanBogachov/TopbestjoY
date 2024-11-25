@@ -1,183 +1,162 @@
+// Мобільна версія
 @include media(mobile) {
   .footer-section .container {
     width: 320px;
-    padding-bottom: 0px;
+    padding-bottom: 0;
   }
+
   .footer-title {
     display: none;
   }
+
   .footer-section {
     background-color: #0b2e29;
-    // padding-top: 10px;
     color: $_main_bg_color;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-
-    .footer-content {
-      display: flex;
-      //   flex-direction: column;
-      //   align-items: center;
-      //   gap: 20px;
-      width: 100%;
-      // padding-top: 20px;
-
-      .footer-logo {
-        width: 40px;
-        height: 40px;
-        margin-top: 20px;
-      }
-
-      .footer-center {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-top: 28px;
-        margin-left: 14px;
-        // flex-direction: column;
-        // align-items: center;
-
-        .footer-links {
-          display: flex;
-          gap: 5px;
-          margin-bottom: 10px;
-
-          a {
-            color: $_main_bg_color;
-            text-decoration: none;
-            @include font(10, 25);
-          }
-
-          span {
-            color: $_main_bg_color;
-            @include font(10, 25);
-          }
-        }
-      }
-    }
-    .footer-social {
-      margin-bottom: 7px;
-
-      a {
-        display: inline-block;
-      }
-
-      .social-net-icon {
-        fill: #2abf9e;
-        // stroke: #2abf9e;
-        width: 40px;
-        height: 40px;
-      }
-    }
-
-    .copyright {
-      // margin-top: 10px;
-      @include font(12, 45);
-      color: $_main_bg_color;
-      letter-spacing: 0.03em;
-      text-align: center;
-    }
   }
-  .footer-section .footer-content .footer-center .footer-links a:hover {
+
+  .footer-content {
+    display: flex;
+    width: 100%;
+  }
+
+  .footer-logo {
+    width: 40px;
+    height: 40px;
+    margin-top: 20px;
+  }
+
+  .footer-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 28px;
+    margin-left: 14px;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 10px;
+  }
+
+  .footer-links a,
+  .footer-links span {
+    color: $_main_bg_color;
+    text-decoration: none;
+    @include font(10, 25);
+  }
+
+  // .footer-social {
+  //   margin-bottom: 7px;
+  // }
+
+  .footer-social a {
+    display: inline-block;
+  }
+
+  .social-net-icon {
+    fill: #2abf9e;
+    width: 40px;
+    height: 40px;
+  }
+
+  .copyright {
+    @include font(12, 45);
+    color: $_main_bg_color;
+    letter-spacing: 0.03em;
+    text-align: center;
+  }
+
+  .footer-links a:hover {
     text-decoration: underline;
     text-decoration-skip-ink: none;
   }
-  .footer-section.container {
-    padding-bottom: 0;
-  }
+
   .copyright:hover {
     text-decoration: underline;
     text-decoration-skip-ink: none;
   }
 }
 
+// Десктопна версія
 @include media(desktop) {
   .footer-section .container {
     width: 1200px;
-    padding-bottom: 22px;
+    padding-bottom: 0px;
   }
+
   .footer-title {
     display: block;
     font-weight: 600;
     font-size: 36px;
     color: #2abf9e;
-    // margin-top: 42px;
-    // margin-right: 0px;
   }
 
   .footer-section {
     background-color: #0b2e29;
-    // padding-top: 30px;
     color: $_main_bg_color;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    .footer-social {
-      margin-top: 10px;
+  }
 
-      a {
-        display: inline-block;
-      }
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    width: 100%;
+  }
 
-      .social-net-icon {
-        fill: #2abf9e;
-        // stroke: #2abf9e;
-        width: 68px;
-        height: 68px;
-      }
-    }
-    .footer-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 30px;
-      width: 100%;
-      .footer-center {
-        display: block;
-        margin-top: 0px;
-        margin-left: 0px;
-        .footer-links {
-          display: flex;
-          gap: 5px;
+  .footer-logo {
+    width: 60px;
+    height: 60px;
+    margin-top: 0;
+    margin-right: 0;
+  }
 
-          a {
-            color: $_main_bg_color;
-            text-decoration: none;
-            @include font(20, 45);
-          }
+  .footer-center {
+    display: block;
+    margin-top: 0;
+    margin-left: 0;
+  }
 
-          span {
-            color: $_main_bg_color;
-            @include font(20, 45);
-          }
-        }
-      }
+  .footer-links {
+    display: flex;
+    gap: 5px;
+    margin: 14px 0 0 0;
+  }
 
-      .footer-logo {
-        width: 60px;
-        height: 60px;
-        margin-top: 0px;
-        margin-right: 0px;
-      }
+  .footer-links a,
+  .footer-links span {
+    color: $_main_bg_color;
+    text-decoration: none;
+    @include font(20, 45);
+  }
 
-      /* Горизонтальне вирівнювання верхніх елементів */
-      .footer-top {
-        display: flex;
-        justify-content: center; /* Центрування по горизонталі */
-        align-items: center; /* Центрування по вертикалі */
-        gap: 20px; /* Відстань між елементами */
-        width: 100%; /* Повна ширина для адаптивності */
-        margin-bottom: 20px;
-      }
-    }
+  .footer-social {
+    margin-top: 10px;
+  }
 
-    .copyright {
-      @include font(20, 45);
-      color: $_main_bg_color;
-      letter-spacing: 0.03em;
-      margin-top: 10px;
-    }
+  .footer-social a {
+    display: inline-block;
+  }
+
+  .social-net-icon {
+    fill: #2abf9e;
+    width: 68px;
+    height: 68px;
+  }
+
+  .copyright {
+    @include font(20, 45);
+    color: $_main_bg_color;
+    letter-spacing: 0.03em;
+    margin-top: 25px;
   }
 }
