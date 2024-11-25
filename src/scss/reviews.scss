@@ -77,7 +77,7 @@
   }
 }
 @include media(desktop) {
-  .reviews-section.container {
+  .reviews-section .container {
     width: 1200px;
   }
   .reviewer-avatar {
