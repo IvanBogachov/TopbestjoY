@@ -39,9 +39,8 @@
     border-radius: 25px;
     text-align: center;
     color: #fff;
-    background-image:
-      url(/img/EllipseRew@1x.png);
-      background-position: center;
+    background-image: url(/img/EllipseRew@1x.png);
+    background-position: center;
   }
 
   .reviews-section.swiper-wrapper {
@@ -114,10 +113,8 @@
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    background-image:
-      url(/img/EllipseRew@1x.png);
-      background-position: center;
-    
+    background-image: url(/img/EllipseRew@1x.png);
+    background-position: center;
   }
   .reviews-card:nth-child(1) {
     order: 1;
@@ -138,7 +135,7 @@
     margin: 0 50px;
     color: #000;
     background-image: none;
-    
+
     .review-text {
       color: #000;
     }
@@ -157,7 +154,7 @@
     margin: 49px auto 23px;
   }
   .reviews-card:nth-child(2) .review-divider-bottom {
-    margin: 49px auto 23px;
+    margin: 50px auto 30px;
   }
 
   .reviews-card:nth-child(5) .reviewer-name {
@@ -182,9 +179,8 @@
 @media screen and (min-resolution: 2dppx), (min-resolution: 192dpi) {
   .reviews-card {
     @include media(desktop) {
-      background-image: 
-        url(/img/EllipseRew@2x.png);
-        background-size: 541px 441px;
+      background-image: url(/img/EllipseRew@2x.png);
+      background-size: 541px 441px;
     }
   }
 }
