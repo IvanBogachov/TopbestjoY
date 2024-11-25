@@ -16,6 +16,10 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    background-repeat: no-repeat;
+    background-image:
+      url(/img/EllipseFot@1x.png);
+      background-position: bottom 15% left 50%;
   }
 
   .footer-content {
@@ -49,10 +53,6 @@
     text-decoration: none;
     @include font(10, 25);
   }
-
-  // .footer-social {
-  //   margin-bottom: 7px;
-  // }
 
   .footer-social a {
     display: inline-block;
@@ -103,6 +103,10 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    background-repeat: no-repeat;
+    background-image:
+      url(/img/EllipseFot@1x.png);
+      background-position: bottom 15% left 50%;
   }
 
   .footer-content {
@@ -158,5 +162,14 @@
     color: $_main_bg_color;
     letter-spacing: 0.03em;
     margin-top: 25px;
+  }
+}
+@media screen and (min-resolution: 2dppx), (min-resolution: 192dpi) {
+  .footer-section {
+    @include media(desktop) {
+      background-repeat: no-repeat;
+      background-image: 
+        url(/img/EllipseFot@2x.png);
+    }
   }
 }
