@@ -1,55 +1,47 @@
 const handleMobMenu = () => {
   const burgerBtn = document.querySelector('#burger-btn');
   const mobMenu = document.querySelector('#mob-menu');
+  const menuLinks = mobMenu.querySelectorAll('.mob-menu-list-item a');
 
   const disableScroll = () => {
-    console.log('Scroll disabled');
     document.body.style.overflow = 'hidden';
   };
 
   const enableScroll = () => {
-    console.log('Scroll enabled');
     document.body.style.overflow = '';
   };
 
-  const addClickListener = () => {
-    document.addEventListener('pointerdown', closeMenuOnClickOutside);
+  const openMenu = () => {
+    mobMenu.classList.add('open');
+    disableScroll();
+    document.addEventListener('click', closeMenuOnClickOutside);
   };
 
-  const removeClickListener = () => {
-    document.removeEventListener('pointerdown', closeMenuOnClickOutside);
+  const closeMenu = () => {
+    mobMenu.classList.remove('open');
+    enableScroll();
+    document.removeEventListener('click', closeMenuOnClickOutside);
   };
 
-  burgerBtn.addEventListener('click', () => {
+  const toggleMenu = () => {
     if (mobMenu.classList.contains('open')) {
-      console.log('Closing menu');
-      mobMenu.classList.remove('open');
-      enableScroll();
-      removeClickListener();
+      closeMenu();
     } else {
-      console.log('Open menu');
-      mobMenu.classList.add('open');
-      disableScroll();
-      addClickListener();
-    }
-  });
-
-  const menuLinks = mobMenu.querySelectorAll('.mob-menu-list-item a');
-  menuLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      mobMenu.classList.remove('open');
-      enableScroll();
-    });
-  });
-
-  const closeMenuOnClickOutside = e => {
-    const clickInside = mobMenu.contains(e.target);
-    if (!clickInside) {
-      mobMenu.classList.remove('open');
-      enableScroll();
-      removeClickListener();
+      openMenu();
     }
   };
+
+  const closeMenuOnClickOutside = event => {
+    if (!mobMenu.contains(event.target) && !burgerBtn.contains(event.target)) {
+      closeMenu();
+    }
+  };
+
+  menuLinks.forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
+
+  burgerBtn.addEventListener('click', toggleMenu);
 };
 
 handleMobMenu();
