@@ -1,29 +1,22 @@
+// Слідкуємо за прокруткою сторінки
 window.addEventListener('scroll', function () {
   var scrollButton = document.querySelector('.top');
 
-  // Перевіряємо, чи заблоковано скрол
-  if (document.body.classList.contains('no-scroll')) {
-    return; // Якщо скрол заблоковано, зупиняємо виконання
-  }
-
+  // Показуємо або ховаємо кнопку залежно від позиції скролу
   if (window.scrollY > 1000) {
     scrollButton.style.display = 'flex';
   } else {
     scrollButton.style.display = 'none';
   }
 });
-document.querySelector('.top').addEventListener('click', function () {
-  // Тимчасово розблоковуємо скрол
-  document.body.classList.remove('no-scroll');
 
-  // Прокручуємо сторінку вгору
+// Обробник кліку на кнопку "Наверх"
+document.querySelector('.top').addEventListener('click', function (event) {
+  event.preventDefault(); // Запобігаємо можливій дефолтній поведінці
+
+  // Прокручуємо сторінку до верху з плавною анімацією
   window.scrollTo({
     top: 0,
-    behavior: 'smooth',
+    behavior: 'smooth', // Забезпечує плавність прокрутки
   });
-
-  // Знову блокуємо скрол через невеликий час після прокрутки
-  setTimeout(() => {
-    document.body.classList.add('no-scroll');
-  }, 500); // Виставляємо час відповідно до швидкості прокрутки
 });
