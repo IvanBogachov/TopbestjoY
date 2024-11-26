@@ -1,26 +1,26 @@
-// Мобільні стилі
-@include media(mobile) {
-  .faq-section .container {
+.faq-section .container {
     width: 320px;
-    padding-bottom: 0px;
+    padding-bottom: 40px;
+    @include media(desktop) {
+      width: 1200px;
+      padding-bottom: 120px;
+    }
   }
   .faq-title {
     font-weight: 600;
     font-size: 32px;
     padding-bottom: 40px;
+    @include media(desktop) {
+      font-size: 40px;
+    padding-bottom: 80px;
+    }
   }
-
-  .faq-section {
-    padding-bottom: 40px;
-  }
-
   .faq-accordion-container .ac {
     margin-top: 0;
     border: none;
     background-color: transparent;
     box-sizing: border-box;
   }
-
   .faq-accordion-container .ac .ac-trigger {
     all: unset;
     display: flex;
@@ -41,30 +41,47 @@
     @include font(16, 28);
 
     transition: border $_time_transform $_cubic_bezier, stroke $_time_transform $_cubic_bezier;
+
+    @include media(desktop) {
+      @include font(32, 23);
+      min-height: 97px;
+    // display: flex;
+    // align-items: center;
+    justify-content: center;
+    position: relative;
+    }
   }
   .faq-accordion-container .ac .ac-trigger:hover {
     border: 3px solid $_accent_color;
     stroke: $_main_color_text;
   }
-
   .faq-accordion-container .faq-item-btn-icon {
     margin-right: 10px;
     flex-shrink: 0;
     transition: transform $_time_transform $_cubic_bezier;
-  }
 
+    @include media(desktop) {
+      position: absolute;
+    left: 10px;
+    }
+  }
   .faq-accordion-container .faq-item.is-active .faq-item-btn-icon {
     transform: rotate(180deg);
   }
-
-  .faq-accordion-container .faq-item-btn-icon svg {
+.faq-accordion-container .faq-item-btn-icon svg {
     display: block;
   }
-
   .faq-item-btn::after {
     display: none;
   }
-
+  .faq-accordion-container .ac-panel .faq-item-description {
+    margin: 0;
+    color: #000;
+    font-size: 14px;
+    @include media(desktop) {
+      @include font(32, 23);
+    }
+  }
   .faq-accordion-container .ac-panel {
     display: block;
     border: 3px solid $_main_color_text;
@@ -89,13 +106,6 @@
     transition: max-height $_time_transform $_cubic_bezier,
     visibility $_time_transform $_cubic_bezier;
   }
-
-  .faq-accordion-container .ac-panel .faq-item-description {
-    margin: 0;
-    color: #000;
-    font-size: 14px;
-  }
-
   .ac.is-active .ac-panel {
     height: auto;
     visibility: visible;
@@ -104,7 +114,6 @@
     align-items: center;
     justify-content: center;
   }
-
   .faq-section
     .faq-list
     .faq-item.ac
@@ -116,54 +125,17 @@
     @include font(16, 22);
     margin: 0;
     padding: 5px 0;
-  }
-}
-
-// Десктопні стилі
-@include media(desktop) {
-  .faq-section .container {
-    width: 1200px;
-    padding-bottom: 0px;
-  }
-  .faq-title {
-    font-size: 40px;
-    padding-bottom: 80px;
-  }
-  .faq-section {
-    padding-bottom: 0px;
-  }
-  .faq-accordion-container .ac .ac-trigger {
-    @include font(32, 23);
-  }
-  .faq-accordion-container .ac-panel .faq-item-description {
-    @include font(32, 23);
-  }
-
-  .faq-accordion-container .ac .ac-trigger {
-    min-height: 97px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-  }
-
-  .faq-accordion-container .faq-item-btn-icon {
-    position: absolute;
-    left: 10px;
-  }
-
-  .faq-accordion-container .faq-item-btn span {
-    flex: 1;
-    text-align: center;
-  }
-  .faq-section
-    .faq-list
-    .faq-item.ac
-    .faq-item-description-container.ac-panel
-    .faq-item-description.ac-text {
-    font-weight: 500;
+    @include media(desktop) {
+      font-weight: 500;
     @include font(32, 44);
     margin: 0;
     padding: 5px 60px;
+    }
+  }
+
+@include media(desktop) {
+  .faq-accordion-container .faq-item-btn span {
+    flex: 1;
+    text-align: center;
   }
 }
